@@ -6,7 +6,12 @@ public class SongDB extends Persistent {
 
 	public SongDB(String filePath) {
 		super(filePath);
+        fromFile();
 	}
+
+    public void addSong(Song s) {
+        songs.add(s);
+    }
 
     public List<Song> getSongs() {
         return songs;
@@ -32,12 +37,36 @@ public class SongDB extends Persistent {
         return tmp;
     }
 
-
+    @Override
 	public void fromFile() {
-		
+        String stored = getStored();
+
+        // Split into lines.
+        String[] lines = stored.split("\n");
+
+        // For each line, split into song and level. Then create (?) a
+        // new instance of that song and place it in the database.
+        for (String s : lines) {
+            String[] tmp = s.split(",");
+            try {
+                String name = tmp[0];
+                int level = Integer.parseInt(tmp[1]);
+                addSong(new Song(name, level));
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Malformed SongDB file.");
+                System.exit(1);
+            } catch (NumberFormatException e) {
+                System.out.println("Malformed SongDB file: song level not a number.");
+                System.exit(1);
+            }
+        }
 	}
 
+    @Override
 	public void toFile() {
-		
+		for (Song s : songs) {
+            // TODO: Should Store() be made lowercase?
+            Store(s.getName() + "," + s.getLevel() + "\n");
+        }
 	}
 }
