@@ -21,7 +21,7 @@ public class PlayList {
 		songItems.add(new SongItem(newSong.getName(), newSong.getLevel()));
 	}
 	
-	public void addSong(ArrayList<Song> newSongs) {
+	public void addSong(List<Song> newSongs) {
 		for(Song s : newSongs) {
 			addSong(s);
 		}

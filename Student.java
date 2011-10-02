@@ -14,22 +14,40 @@ public class Student extends Persistent implements TimeAware {
 	private PracticeList current;
 	private PlayList achieved;
 	private int level;
-	private static final int MAX_LEVEL = 7;
+	//private static final int MAX_LEVEL = 7;
+	private SongDB songStorage;
 	
-	public Student(String name, int level) {
+	public Student(String name, int level, SongDB songStorage) {
 		super(name + ".txt");
 		this.name = name;
 		this.current = null;
 		//this.level = (new Random().nextInt(MAX_LEVEL));
 		this.level = level;
+		this.songStorage = songStorage;
 		
 		// Select songs up to level
 		this.achieved = new PlayList();
+		
+		populateSongs();
+	}
+	
+	// If you're calling this constructor, you should populate using getStored(String) function
+	public Student(String from_file, SongDB songStorage) {
+		super(from_file);
+		this.name = null;
+		this.current = null;
+		this.achieved = new PlayList();
+		this.songStorage = songStorage;
+		
+		// PLAYLIST SHOULD BE POPULATED BY THE getStored FUNCTION!!
+	}
+	
+	public void populateSongs() {
 		for(int i = 0; i < this.level; i++) {
-			this.achieved.addSong(SongDB.getSongsByLevel(i));
+			this.achieved.addSong(this.songStorage.getSongsByLevel(i));
 		}
 		
-		List<Song> currLevelSongs = SongDB.getSongsByLevel(this.level);
+		List<Song> currLevelSongs = songStorage.getSongsByLevel(this.level);
 		int currLevSongCount = currLevelSongs.size();
 		
 		int numCurrent = (new Random()).nextInt(currLevSongCount + 1);
@@ -38,15 +56,11 @@ public class Student extends Persistent implements TimeAware {
 		while(it.hasNext()) {
 			achieved.addSong(it.next());
 			it.remove();
+			numCurrent--;
+			if(numCurrent == 0) {
+				return;
+			}
 		}
-	}
-	
-	// If you're calling this constructor, you should populate using getStored(String) function
-	public Student(String from_file) {
-		super(from_file);
-		this.name = null;
-		this.current = null;
-		this.achieved = new PlayList();
 	}
 	
 	public int getStudentLevel() {
