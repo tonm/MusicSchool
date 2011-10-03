@@ -29,6 +29,7 @@ public class Student extends Persistent implements TimeAware {
 		this.achieved = new PlayList();
 		
 		populateSongs();
+		subscribeToClock();
 	}
 	
 	// If you're calling this constructor, you should populate using getStored(String) function
@@ -39,7 +40,14 @@ public class Student extends Persistent implements TimeAware {
 		this.achieved = new PlayList();
 		this.songStorage = songStorage;
 		
+		subscribeToClock();
+		
 		// PLAYLIST SHOULD BE POPULATED BY THE getStored FUNCTION!!
+	}
+	
+	public void subscribeToClock() {
+		Clock timer = Clock.getInstance();
+		timer.subscribe(this);
 	}
 	
 	public void populateSongs() {

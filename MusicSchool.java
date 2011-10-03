@@ -31,11 +31,6 @@ public class MusicSchool {
 				contSim = false;
 			}
 		} while(contSim);
-		
-		
-		
-		
-		
 	}
 	
 	public static int getStdInput() {
