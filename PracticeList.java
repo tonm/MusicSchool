@@ -28,6 +28,18 @@ public class PracticeList {
 		
 		return numLeft;
 	}
+	
+	public boolean isEmpty() {
+		return items.isEmpty();
+	}
+
+	public int getAssignedDay() {
+		return assignedDay;
+	}
+
+	public int getDueDay() {
+		return dueDay;
+	}
 
 	public void removePracticed() {
 		Iterator<PracticeItem> li = items.iterator();
@@ -38,6 +50,15 @@ public class PracticeList {
 				li.remove();
 			}
 		}
+	}
+	
+	public String toString() {
+		String result = "";
+		
+		for (Iterator<PracticeItem> i = items.iterator(); i.hasNext();)
+			result += (i.toString() + " ");
+		
+		return result.trim();
 	}
 	
 }

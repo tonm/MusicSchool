@@ -7,6 +7,11 @@ public class PracticeItem extends Song {
 		practice_count = 0;
 	}
 	
+	public PracticeItem(Song from) {
+		super(from.name, from.level);
+		practice_count = 0;
+	}
+	
 	public int getPracticeCount() {
 		return practice_count;
 	}

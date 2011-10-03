@@ -1,7 +1,7 @@
 
 public class Song {
-	private String name;
-	private int level;
+	protected String name;
+	protected int level;
 	
 	public Song(String name, int level) {
 		this.name = name;
@@ -22,5 +22,9 @@ public class Song {
 
 	public void setLevel(int level) {
 		this.level = level;
+	}
+	
+	public String toString() {
+		return (name + ".L" + Integer.toString(level));
 	}
 }

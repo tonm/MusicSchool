@@ -6,10 +6,12 @@ public abstract class Persistent {
 	private File file;
 	private FileReader file_in;
 	private FileWriter file_out;
+	private String file_name;
 	
 	public Persistent(String file_path) {
 		file = new File(file_path);
 		
+		file_name = file_path;
 		try {
 			file_in = new FileReader(file);
 			file_out = new FileWriter(file);
@@ -24,6 +26,10 @@ public abstract class Persistent {
 		
 	}
 	
+	public String getFile_name() {
+		return file_name;
+	}
+
 	public String getStored() {
 		char[] temp = new char[1024];
 		

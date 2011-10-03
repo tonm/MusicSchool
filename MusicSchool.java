@@ -13,7 +13,7 @@ public class MusicSchool {
 		
 		Classroom paddedWalls = new Classroom(null); // CLASSROOM EXPECTS LIST OF STUDENTS!
 		SongDB songData = new SongDB("songs.txt");
-		Instructor teacher = new Instructor("Glenn Holland", paddedWalls);
+		Instructor teacher = new Instructor("Glenn Holland", paddedWalls, songData);
 
 		
 		boolean contSim = true;
