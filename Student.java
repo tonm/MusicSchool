@@ -154,14 +154,14 @@ public class Student extends Persistent implements TimeAware {
 		}
 	}
 	
-	public String store() {
-		String contents = new String();
-		contents = this.name + "^" + this.level + "^^" + current.toString() + "";
-		
-		return contents;
-	}
 	
-	public void getStored(String contents) {
+	public Boolean practicedPlayList() {
+		
+		return null;
+	}
+
+	public void fromFile() {
+		String contents = getStored();
 		String [] data = contents.split("^^,\\s");
 		String [] nameAndLevel = data[0].split("^\\s");
 		this.name = nameAndLevel[0];
@@ -174,22 +174,14 @@ public class Student extends Persistent implements TimeAware {
 			Song newSong = new Song(titleAndLevel[0], Integer.parseInt(titleAndLevel[1]));
 			achieved.addSong(newSong);
 		}
-	}
-	
-	public Boolean practicedPlayList() {
-		
-		return null;
-	}
-
-	@Override
-	public void fromFile() {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void toFile() {
-		// TODO Auto-generated method stub
+		String contents = new String();
+		contents = this.name + "^" + this.level + "^^" + current.toString() + "";
+		
+		Store(contents);
 		
 	}
 }
