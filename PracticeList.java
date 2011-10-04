@@ -7,7 +7,7 @@ public class PracticeList {
 	private List<PracticeItem> items;
 	
 	public PracticeList(PracticeItem[] items, int assigned, int due) {
-		this.items = Arrays.asList(items);
+		this.items = new ArrayList<PracticeItem>(Arrays.asList(items));
 		assignedDay = assigned;
 		dueDay = due;
 	}
@@ -56,7 +56,7 @@ public class PracticeList {
 		String result = "";
 		
 		for (Iterator<PracticeItem> i = items.iterator(); i.hasNext();)
-			result += (i.toString() + " ");
+			result += (i.next().toString() + " ");
 		
 		return result.trim();
 	}

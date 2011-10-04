@@ -5,7 +5,7 @@ public class SongDB extends Persistent {
 	private List<Song> songs;
 
 	public SongDB(String filePath) {
-		super(filePath);
+		super(filePath, true);
 		songs = new ArrayList<Song>(); // FIX: Wasn't initialized.
         fromFile();
 	}

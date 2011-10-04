@@ -18,7 +18,7 @@ public class Student extends Persistent implements TimeAware {
 	private SongDB songStorage;
 	
 	public Student(String name, int level, SongDB songStorage) {
-		super(name + ".txt");
+		super(name + ".txt", false);
 		this.name = name;
 		this.current = null;
 		//this.level = (new Random().nextInt(MAX_LEVEL));
@@ -34,7 +34,7 @@ public class Student extends Persistent implements TimeAware {
 	
 	// If you're calling this constructor, you should populate using getStored(String) function
 	public Student(String from_file, SongDB songStorage) {
-		super(from_file);
+		super(from_file, false);
 		this.name = null;
 		this.current = null;
 		this.achieved = new PlayList();

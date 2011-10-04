@@ -5,7 +5,7 @@ public class ProgressReporter extends Persistent {
     private StringBuffer buffer;
 
     public ProgressReporter(Instructor in) {
-    	super(in.getName() + "-progrep.txt");
+    	super(in.getName() + "-progrep.txt", true);
         buffer = new StringBuffer();
     }
 

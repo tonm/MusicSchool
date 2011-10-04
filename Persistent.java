@@ -7,12 +7,12 @@ public abstract class Persistent {
 	private FileWriter file_out;
 	private String file_name;
 	
-	public Persistent(String file_path) {
+	public Persistent(String file_path, boolean append) {
 		
 		file_name = file_path;
 		try {
+			file_out = new FileWriter(file_path, append);
 			file_in = new FileReader(file_path);
-			file_out = new FileWriter(file_path, true);
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
