@@ -6,6 +6,7 @@ public class SongDB extends Persistent {
 
 	public SongDB(String filePath) {
 		super(filePath);
+		songs = new ArrayList<Song>(); // FIX: Wasn't initialized.
         fromFile();
 	}
 
@@ -41,6 +42,8 @@ public class SongDB extends Persistent {
 	public void fromFile() {
         String stored = getStored();
 
+        // FIXED: This will allow our program to work on windows platforms too.
+        stored = stored.replace("\r\n", "\n");
         // Split into lines.
         String[] lines = stored.split("\n");
 

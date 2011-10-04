@@ -14,7 +14,7 @@ public abstract class Persistent {
 		file_name = file_path;
 		try {
 			file_in = new FileReader(file);
-			file_out = new FileWriter(file);
+			file_out = new FileWriter(file, true);
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -32,16 +32,18 @@ public abstract class Persistent {
 
 	public String getStored() {
 		char[] temp = new char[1024];
+		int len = 0;
 		
+				
 		try {
-			file_in.read(temp);
+			len = file_in.read(temp);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch(ArrayIndexOutOfBoundsException e) {
 			e.printStackTrace();
 		}
 		
-		return new String(temp);
+		return new String(temp,0,len);
 	}
 	
 	public void Store(String contents) {

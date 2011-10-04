@@ -10,9 +10,13 @@ public class MusicSchool {
 	 */
 	public static void main(String[] args) throws IOException {
 		System.out.println("Welcome to the Music School");
+		Student[] students = new Student[2];
 		
-		Classroom paddedWalls = new Classroom(null); // CLASSROOM EXPECTS LIST OF STUDENTS!
 		SongDB songData = new SongDB("songs.txt");
+		students[0] = new Student("Erik", 3, songData);
+		students[1] = new Student("Mike", 2, songData);
+		Classroom paddedWalls = new Classroom(students); // CLASSROOM EXPECTS LIST OF STUDENTS!
+		
 		Instructor teacher = new Instructor("Glenn Holland", paddedWalls, songData);
 
 		

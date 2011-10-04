@@ -105,7 +105,7 @@ public class Student extends Persistent implements TimeAware {
 	
 	public void doDailyPractice(int weekday) {
 		Random rand = new Random();
-		double chance = rand.nextInt(weekday);
+		double chance = rand.nextInt(weekday + 1);
 		
 		if(chance > (7 - weekday)) {
 			practice(weekday);
@@ -132,6 +132,7 @@ public class Student extends Persistent implements TimeAware {
 	}
 	
 	public void practice(int weekday) {
+		if (current == null) return;
 		int itemsLeft = current.getItemsQuantityLeft();
 		int itemsToPractice = itemsLeft * (weekday / 6);
 		
