@@ -29,7 +29,7 @@ public abstract class Persistent {
 	}
 
 	public String getStored() {
-		char[] temp = new char[1024];
+		char[] temp = new char[2500];
 		int len = 0;
 		
 				

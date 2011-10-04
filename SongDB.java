@@ -56,10 +56,10 @@ public class SongDB extends Persistent {
                 int level = Integer.parseInt(tmp[1]);
                 addSong(new Song(name, level));
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Malformed SongDB file.");
+                System.out.println("Malformed SongDB file " + s);
                 System.exit(1);
             } catch (NumberFormatException e) {
-                System.out.println("Malformed SongDB file: song level not a number.");
+                System.out.println("Malformed SongDB file: song level not a number " + s);
                 System.exit(1);
             }
         }

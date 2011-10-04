@@ -33,7 +33,7 @@ Across The River,4
 Across The Universe,0
 Act Naturally,0
 Actions Speak Louder,0
-Adagio in F,0 
+Adagio in F,0
 Addicted To Love,0
 Adios Mariquita Linda,0
 Adios Mexico,0
@@ -51,7 +51,6 @@ After The Fall,6
 After The Fire Is Gone,6
 After The Gold Rush,6
 After Youve Gone,6
-Afternoon Delight,1
 Afternoon Delight,1
 Against All Odds,1
 Against The Wind,1
