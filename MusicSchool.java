@@ -16,7 +16,7 @@ public class MusicSchool {
 		students[0] = new Student("Erik", 3, songData);
 		students[1] = new Student("Mike", 2, songData);
 		students[2] = new Student("Chris", 1, songData);
-		Classroom paddedWalls = new Classroom(students); // CLASSROOM EXPECTS LIST OF STUDENTS!
+		Classroom paddedWalls = new Classroom(students);
 		
 		Instructor teacher = new Instructor("Glenn Holland", paddedWalls, songData);
 

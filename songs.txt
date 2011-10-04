@@ -1,4 +1,114 @@
-Music,3
-Songs,2
-Yelling,1
-Headbanging,0
+A Teenager In Love,0
+A Thousand Miles From Nowhere,1
+A Tombstone Every Mile,2
+A Venture,3
+A Walk In The Black Forest,2
+A White Sport Coat,3
+A White Sport Coat,1
+A Whiter Shade Of Pale,2
+A Whole New World,3
+A Wonderful Life,4
+A Working Man Cant Get Nowhere Today,3
+A World Of Our Own,3
+A World Without Love,3
+A Worm,2
+Abandoned,2
+Abc,2
+Abduction,2
+Abdul Abulbul Amir,1
+Abilene,1
+Above And Beyond,1
+Abraham Martin And John,1
+Absolute Beginners,1
+Ac Cent Tchu Ate The Positive,6
+Ac Cent Tchu Ate The Positive blow up,6
+Acadian Driftwood,6
+Acapulco 1922,6
+achilles last stand,6
+Acid Rain,6
+Across The Alley From The Alamo,6
+Across The Borderline,6
+Across the Great Divide,6
+Across The River,4
+Across The Universe,0
+Act Naturally,0
+Actions Speak Louder,0
+Adagio in F,0 
+Addicted To Love,0
+Adios Mariquita Linda,0
+Adios Mexico,0
+aeiou sometimes y,0
+Aesop Knew,3
+Aesops Fables Our Way,2
+Africa,2
+Africa Bamba,2
+African Echoes,2
+African Herbsman,2
+After All This Time,2
+After Midnight,2
+after midnight,6
+After The Fall,6
+After The Fire Is Gone,6
+After The Gold Rush,6
+After Youve Gone,6
+Afternoon Delight,1
+Afternoon Delight,1
+Against All Odds,1
+Against The Wind,1
+Aginst The Law,1
+Agora,1
+Ah Me Furi,1
+Aha Me A Riddle I Day,1
+Ahab The Arab,1
+Aint Gonna Worry No More,5
+Aint Got No Home,5
+Aint Hurtin Nobody,5
+Aint It Heavy,5
+Aint It Somethin,5
+Aint Life For The Living,5
+Aint Life Grand,5
+Aint Life Hell,5
+Aint Living Long Like This,5
+Aint Living Long Like This II,5
+Aint Love Strange,3
+Aint Misbehavin,3
+Aint No Bread In The Breadbox,3
+Aint No Money,3
+Aint No Mountain High Enough,3
+Aint No Ramblers Anymore,3
+Aint No Sunshine,3
+Aint No Sunshine,3
+Aint No Top 40 Song,3
+Aint No Way to Treat a Lady,3
+Aint No Woman,2
+ain't nobody but me,2
+Aint Nobody Here But Us,2
+Aint Nobody Here But Us Chickens,2
+Aint Nobody Home,2
+Aint Nothin But Trouble,2
+Aint Nothin Shakin,2
+Aint That A Kick In The Head,2
+Aint That A Shame,5
+Aint That A Shame,5
+Aint That Peculiar,5
+Air Dance,5
+Air That I Breathe,0
+Airhead,5
+Airline Agent,6
+Airplane,2
+Airport Love Theme,3
+Airwaves extended,4
+Aku Aku,5
+Alabam,6
+Alabama Getaway,0
+Alabama Jubilee,1
+alabama song,2
+Alabama Song Whiskey Bar,3
+Alberta,4
+Alexanders Ragtime Band,5
+Alice,6
+Alice In Wonderland,0
+Alice's Restaurant,3
+Alices Restaurant Massacree,4
+Alison,2
+Alkali,2
