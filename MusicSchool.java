@@ -10,11 +10,12 @@ public class MusicSchool {
 	 */
 	public static void main(String[] args) throws IOException {
 		System.out.println("Welcome to the Music School");
-		Student[] students = new Student[2];
+		Student[] students = new Student[3];
 		
 		SongDB songData = new SongDB("songs.txt");
 		students[0] = new Student("Erik", 3, songData);
 		students[1] = new Student("Mike", 2, songData);
+		students[2] = new Student("Chris", 1, songData);
 		Classroom paddedWalls = new Classroom(students); // CLASSROOM EXPECTS LIST OF STUDENTS!
 		
 		Instructor teacher = new Instructor("Glenn Holland", paddedWalls, songData);
@@ -29,6 +30,7 @@ public class MusicSchool {
 			Clock timer = Clock.getInstance();
 			timer.start(duration);
 			
+			teacher.toFile();
 			System.out.println("Would you like to repeat the simulation? (y/n): ");
 			char repeat = (char) System.in.read();
 			if(repeat == 'n') {

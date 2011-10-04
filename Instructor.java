@@ -22,7 +22,12 @@ public class Instructor extends Persistent implements TimeAware {
 	}
 	
 	public void toFile() {
+		String result = new String();
 		
+		result += name + "\n";
+		result += pupils.toString();
+		
+		Store(result);
 	}
 	
 	public void fromFile() {

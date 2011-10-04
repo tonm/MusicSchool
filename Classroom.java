@@ -13,4 +13,14 @@ public class Classroom {
 	public Iterator<Student> getStudentsIterator() {
 		return students.iterator();
 	}
+	
+	public String toString() {
+		String result = new String();
+		for (Student s : students) {
+			s.toFile();
+			result += s.getFile_name() + " ";
+		}
+		
+		return result.trim();
+	}
 }

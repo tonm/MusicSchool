@@ -180,7 +180,7 @@ public class Student extends Persistent implements TimeAware {
 
 	public void toFile() {
 		String contents = new String();
-		contents = this.name + "^" + this.level + "^^" + current.toString() + "";
+		contents = this.name + "^" + this.level + "^^";
 		
 		Store(contents);
 		
