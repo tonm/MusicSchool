@@ -45,9 +45,9 @@ public class Instructor extends Persistent implements TimeAware {
 					PracticeList incomplete = s.getCurrentPractice();
 					
 					if (incomplete.isEmpty())
-						prog.report(s.getName() + "passed assignment given on " + Integer.toString(incomplete.getDueDay()));
+						prog.report(s.getName() + " passed assignment given on " + Integer.toString(incomplete.getDueDay()));
 					else
-						prog.report(s.getName() + "failed assignment given on " + Integer.toString(incomplete.getDueDay()) +
+						prog.report(s.getName() + " failed assignment given on " + Integer.toString(incomplete.getDueDay()) +
 								", did not do: " + incomplete.toString());
 				}
 			}
